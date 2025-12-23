@@ -1,0 +1,21 @@
+-- Functions and Procedures
+
+-- Function to calculate factorial
+CREATE FUNCTION factorial(n INT) RETURNS INT AS
+    IF n <= 1 THEN
+        RETURN 1;
+    END IF;
+    RETURN n * CALL factorial(n - 1);
+END FUNCTION;
+
+PRINT "Factorial of 5 is: " || CALL factorial(5);
+
+-- Procedure to greet
+CREATE PROCEDURE greet(name TEXT, times INT) AS
+    FOR i IN 1..times DO
+        PRINT "Hello, " || name || "!";
+    END FOR;
+END PROCEDURE;
+
+EXEC greet("Alice", 80000);
+

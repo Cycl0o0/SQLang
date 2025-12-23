@@ -1,0 +1,11 @@
+-- Hello World in SQLang
+
+PRINT "Hello, World!";
+
+DECLARE name TEXT = "SQLang User";
+PRINT "Welcome, " || name || "!";
+
+DECLARE x INT = 10;
+DECLARE y INT = 20;
+PRINT "x + y = " || (x + y);
+
